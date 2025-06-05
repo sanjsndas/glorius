@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glorious Gardening Services - Cookies Policy</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f6f9f4;
+      color: #2f4f2f;
+      line-height: 1.6;
+      padding-bottom: 4rem; /* space for dialog */
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background: linear-gradient(90deg, #2e7d32, #60ad5e);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav li {
+      padding: 0.2rem 0;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      padding: 2rem 2.5rem;
+    }
+    h2 {
+      color: #2e7d32;
+      border-bottom: 3px solid #60ad5e;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+    h3 {
+      color: #387d30;
+      margin-top: 1.6rem;
+    }
+    p {
+      margin-top: 1rem;
+      color: #3a4a30;
+      font-size: 1rem;
+      text-align: justify;
+      white-space: pre-line;
+    }
+    ul {
+      margin-top: 0.8rem;
+      margin-left: 1.3rem;
+      color: #3a4a30;
+      font-size: 1rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7a9455;
+      margin: 3rem auto 1rem;
+      max-width: 900px;
+      padding: 1rem 1rem 2rem;
+      border-top: 3px solid #60ad5e;
+      background-color: #e6f0d4;
+      border-radius: 0 0 10px 10px;
+    }
+    footer .contact-info {
+      margin-bottom: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      color: #4a6a45;
+      font-weight: 600;
+      flex-wrap: nowrap;
+    }
+    footer .contact-info div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    footer .contact-info div svg {
+      fill: #2e7d32;
+      width: 18px;
+      height: 18px;
+    }
+
+    /* Cookie consent dialog */
+    #cookie-consent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #305923;
+      color: #e4f1e1;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.25);
+      font-size: 0.9rem;
+      z-index: 110;
+      border-top: 3px solid #60ad5e;
+    }
+    #cookie-consent p {
+      margin: 0 1rem 0 0;
+      flex: 1 1 320px;
+    }
+    #cookie-consent button {
+      background-color: #60ad5e;
+      border: none;
+      color: #1b361c;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      margin-left: 0.7rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      flex: 0 0 auto;
+    }
+    #cookie-consent button:hover {
+      background-color: #4c9447;
+    }
+    #cookie-consent button.decline {
+      background-color: #9a3b3b;
+      color: #f8d7d7;
+    }
+    #cookie-consent button.decline:hover {
+      background-color: #7c2e2e;
+    }
+
+    @media (max-width: 600px){
+      #cookie-consent {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #cookie-consent p {
+        margin-bottom: 0.6rem;
+      }
+      #cookie-consent button {
+        margin-left: 0;
+        margin-right: 0.4rem;
+        flex: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Glorious Gardening Services</h1>
+    <nav aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="cookies.html" aria-current="page">Cookies Policy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Cookies Policy</h2>
+    <p>Last updated: June 2024</p>
+    <p>Glorious Gardening Services (referred to as "we", "our", or "us") uses cookies and similar tracking technologies on our website to enhance your user experience, analyze site usage, and for advertising purposes. This Cookies Policy explains what cookies are, how we use them, the choices you have regarding cookies, and how to manage them.</p>
+
+    <h3>1. What Are Cookies?</h3>
+    <p>Cookies are small text files placed on your device (computer, smartphone, tablet) when you visit a website. They allow the website to remember your actions and preferences (such as login, language, font size) over a period of time, so you don&rsquo;t have to keep re-entering them whenever you return to the site or browse from one page to another.</p>
+
+    <h3>2. Types of Cookies We Use</h3>
+    <p>We use several types of cookies on our websites, including:</p>
+    <ul>
+      <li><strong>Essential Cookies:</strong> These cookies are necessary for the website to function properly. For example, they enable core functionalities such as security, network management, and accessibility. You cannot disable these cookies without affecting the performance of the site.</li>
+      <li><strong>Performance and Analytics Cookies:</strong> These cookies collect information about how visitors use our website, such as which pages are visited most often and if users encounter error messages. We use this information anonymously to improve how the website works.</li>
+      <li><strong>Functional Cookies:</strong> These cookies remember choices you make, such as your username, language preferences, or region, providing enhanced and personalized features.</li>
+      <li><strong>Advertising and Targeting Cookies:</strong> These cookies are used to deliver advertisements that are more relevant to you and your interests. They also limit the number of times you see an advertisement and help measure the effectiveness of campaigns.</li>
+    </ul>
+
+    <h3>3. Third-Party Cookies</h3>
+    <p>We may use third-party service providers who place cookies and collect information when you visit our website. Examples include analytics providers like Google Analytics and advertising networks. These third-party cookies are subject to the respective providers' privacy policies, and we encourage you to review those policies for more details on how they collect and use data.</p>
+
+    <h3>4. How We Use Cookies</h3>
+    <p>The information collected through cookies helps us:</p>
+    <ul>
+      <li>Ensure the website functions properly and securely.</li>
+      <li>Understand how visitors interact with our website to improve content and navigation.</li>
+      <li>Personalize your experience by remembering preferences and settings.</li>
+      <li>Measure the effectiveness of advertising and marketing efforts.</li>
+    </ul>
+
+    <h3>5. Your Cookie Choices</h3>
+    <p>When you first visit our website, you will see a cookie consent dialog box (like the one at the bottom of this page). You can choose to accept or decline the use of non-essential cookies.</p>
+    <p>If you accept, cookies will be stored on your device according to your choice. If you decline, non-essential cookies will not be used, but essential cookies required for the website&rsquo;s operation will still be active.</p>
+
+    <h3>6. Managing Cookies</h3>
+    <p>You can control and manage cookies through your browser settings. Most browsers allow you to:</p>
+    <ul>
+      <li>View and delete existing cookies;</li>
+      <li>Block or allow cookies on a site-by-site basis;</li>
+      <li>Set preferences for how cookies are handled.</li>
+    </ul>
+    <p>Note that disabling or deleting cookies may affect the functionality and user experience of our website and other sites you visit.</p>
+
+    <h3>7. Updates to Our Cookies Policy</h3>
+    <p>We may update this Cookies Policy occasionally to reflect changes in laws, technology, or our practices. Updates will be posted on this page with an updated date. We encourage you to review the policy periodically to stay informed about our use of cookies.</p>
+
+    <h3>8. Contact Us</h3>
+    <p>If you have any questions about this Cookies Policy or wish to exercise your rights regarding cookies, please contact us:</p>
+    <ul>
+      <li><strong>Address:</strong> 123 Green Street, Garden City, GC 54321</li>
+      <li><strong>Phone:</strong> (123) 456-7890</li>
+      <li><strong>Email:</strong> support@greenthumb.com</li>
+    </ul>
+
+    <p><em>Thank you for visiting Glorious Gardening Services and for taking the time to understand how we use cookies to enhance your experience.</em></p>
+  </main>
+
+  <footer>
+    <div class="contact-info" aria-label="Contact Information">
+      <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 3.45 2.2 6.3 5.3 7.37L12 22l1.7-5.63C16.8 15.3 19 12.45 19 9c0-3.87-3.13-7-7-7zm0 10.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 7.5 12 7.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> 110 W 3rd St, New York, NY 10012, USA</div>
+      <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55 1.28 1 1 0 01.89 1v3.31a1 1 0 01-1 1A17.92 17.92 0 013 6a1 1 0 011-1h3.31a1 1 0 011 .89 11.36 11.36 0 001.28 3.55 1 1 0 01-.21 1.11z"/></svg> (855) 242-9998</div>
+      <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> support@greenthumb.com</div>
+    </div>
+    &copy; 2024 Glorious Gardening Services. All rights reserved.
+  </footer>
+
+  <div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent banner" hidden>
+    <p>We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use our website, you consent to our use of cookies. You can accept or decline non-essential cookies below.</p>
+    <div>
+      <button id="accept-cookies" type="button">Accept</button>
+      <button id="decline-cookies" type="button" class="decline">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const consentEl = document.getElementById('cookie-consent');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const declineBtn = document.getElementById('decline-cookies');
+      const localStorageKey = 'greenthumb_cookie_consent';
+
+      // Show dialog if no decision made
+      function showConsent() {
+        const consent = localStorage.getItem(localStorageKey);
+        if (consent === null) {
+          consentEl.hidden = false;
+        }
+      }
+
+      // Accept cookies action
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem(localStorageKey, 'accepted');
+        consentEl.hidden = true;
+        // You can initialize cookies/scripts here if needed
+      });
+
+      // Decline cookies action
+      declineBtn.addEventListener('click', () => {
+        localStorage.setItem(localStorageKey, 'declined');
+        consentEl.hidden = true;
+        // Optionally disable tracking scripts here
+      });
+
+      // Initialize
+      showConsent();
+    })();
+  </script>
+</body>
+</html>

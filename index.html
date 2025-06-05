@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glorious Gardening Services</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2f4f2f;
+      background-color: #f6f9f4;
+      line-height: 1.6;
+    }
+    a {
+      color: #3a7d44;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Navigation links white */
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #a9d18e; /* lighter green */
+      text-decoration: underline;
+    }
+    header {
+      background: linear-gradient(90deg, #2e7d32, #60ad5e);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav li {
+      padding: 0.2rem 0;
+    }
+    .hero {
+      background-image: url('heroback.png');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e4f1e1;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-size: 2.8rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #60ad5e;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .service-content {
+      padding: 1rem 1.2rem 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .service-content h3 {
+      margin: 0 0 0.7rem 0;
+      color: #275f27;
+    }
+    .service-description {
+      flex-grow: 1;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      color: #4a6a45;
+    }
+    .price {
+      font-weight: 700;
+      color: #246b24;
+      font-size: 1.1rem;
+      border-top: 1px solid #e0e8d9;
+      padding-top: 0.8rem;
+      text-align: right;
+    }
+    .about-text {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1rem;
+      color: #3a4a30;
+      white-space: pre-line;
+      text-align: justify;
+    }
+    .customer-satisfaction, .disclaimer {
+      background: #dcedc8;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      color: #385e0f;
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+      font-size: 0.95rem;
+      box-shadow: inset 0 0 10px rgb(80 100 30 / 0.1);
+      line-height: 1.5;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #7a9455;
+      margin-bottom: 1rem;
+      background-color: #e6f0d4;
+      padding: 1rem 1rem 2rem;
+      border-top: 3px solid #60ad5e;
+    }
+    footer .contact-info {
+      margin-bottom: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      color: #4a6a45;
+      font-weight: 600;
+    }
+    footer .contact-info div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    footer .contact-info div svg {
+      fill: #2e7d32;
+      width: 18px;
+      height: 18px;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        font-size: 1.8rem;
+        height: 40vh;
+      }
+      header {
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Glorious Gardening Services</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#customer-satisfaction">Customer Satisfaction</a></li>
+        <li><a href="#disclaimer">Disclaimer</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    Nurturing Nature, Growing Dreams
+  </div>
+
+  <main>
+    <section id="services">
+      <h2>Our Gardening Services & Prices</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <img src="lawn.png" alt="Lawn Mowing" />
+          <div class="service-content">
+            <h3>Lawn Mowing</h3>
+            <p class="service-description">We offer professional lawn mowing services that ensure your grass is trimmed evenly and beautifully. Using modern equipment, we maintain the perfect lawn height that promotes healthy grass growth and a manicured look.</p>
+            <div class="price">Starting at $40 / visit</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="maint.png" alt="Garden Maintenance" />
+          <div class="service-content">
+            <h3>Garden Maintenance</h3>
+            <p class="service-description">Our comprehensive garden maintenance includes weeding, fertilizing, pruning, and cleaning flower beds, shrubs, and trees. We make your garden look well-cared-for all year round.</p>
+            <div class="price">From $80 / month</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="land.png" alt="Landscaping Design" />
+          <div class="service-content">
+            <h3>Landscaping Design</h3>
+            <p class="service-description">Transform your outdoor space with custom landscaping design tailored to your taste and property layout. Includes planting, pathway creation, and decorative elements for stunning curb appeal.</p>
+            <div class="price">Packages from $1,500</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="prunn.png" alt="Tree Pruning" />
+          <div class="service-content">
+            <h3>Tree Pruning & Trimming</h3>
+            <p class="service-description">Keep your trees healthy and beautiful with our professional pruning and trimming services. We focus on safety and enhancing natural tree shapes, promoting growth and longevity.</p>
+            <div class="price">Starting at $120 per tree</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="irri.png" alt="Irrigation System Installation" />
+          <div class="service-content">
+            <h3>Irrigation System Installation</h3>
+            <p class="service-description">Efficient and effective irrigation systems custom-installed to save water while keeping your plants hydrated. Includes timers, drip lines, and sprinklers tailored for your garden.</p>
+            <div class="price">Starting at $900</div>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="clean.png" alt="Seasonal Cleanups" />
+          <div class="service-content">
+            <h3>Seasonal Cleanups</h3>
+            <p class="service-description">Prepare your garden for each season with our cleanup services – leaf removal, mulching, debris clearing, and prepping plants for weather changes to keep your garden pristine.</p>
+            <div class="price">From $150 per visit</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Glorious Gardening Services</h2>
+      <div class="about-text">
+Glorious Gardening Services is a family-owned business passionate about helping you create and maintain the garden of your dreams. Established over a decade ago, we have grown from a small local operation into a trusted name known for quality, reliability, and personal service. Our team of expert horticulturists, landscapers, and garden lovers bring years of professional experience combined with a deep respect and love for nature.
+
+We understand that gardening is more than just planting and trimming; it’s about creating an outdoor sanctuary that enhances your well-being, adds value to your property, and connects you with the natural rhythms of the seasons. We’re dedicated to sustainable practices to ensure your garden flourishes while protecting the environment.
+
+Our services are tailored to every need and budget. Whether you want a simple lawn mowing service or a complete landscape overhaul, we’re here to listen, advise, and execute with meticulous care. Our client relationships matter deeply; we work closely with you every step of the way to ensure that your garden reflects your vision.
+
+We source native plants whenever possible, employ eco-friendly fertilizers and pest control, and support local nurseries. Our commitment to education means we don’t just do the work for you, we help you understand how to care for your garden so it continues thriving season after season.
+
+In a world moving fast, we believe in slowing down to cultivate beauty, nurture growth, and celebrate life’s simple wonders — one garden at a time.
+      </div>
+    </section>
+
+    <section id="customer-satisfaction" class="customer-satisfaction">
+      <h2>Customer Satisfaction</h2>
+      <p>
+        At Glorious Gardening Services, customer happiness is the root of our success. We pride ourselves on delivering exceptional results that go beyond expectations, ensuring every client feels valued, heard, and supported. Our 5-star reviews and repeat customers speak to our commitment to quality, professionalism, and care. We encourage open communication, timely responses, and flexible scheduling to suit your lifestyle. Your satisfaction isn’t just a goal; it’s our guarantee. Whether it’s enhancing the vibrancy of your flower beds or rejuvenating your entire landscape, we celebrate your garden’s success as much as our own. Join our gardening family and experience the joy of a truly cared-for outdoor space.
+      </p>
+    </section>
+
+    <section id="disclaimer" class="disclaimer">
+      <h2>Disclaimer</h2>
+      <p>
+        Glorious Gardening Services provides all information and services "as is" without any guarantees or warranties. While we strive for the utmost accuracy and quality in our work and advice, gardens are living ecosystems influenced by many uncontrollable factors including climate, soil conditions, plant health, and local wildlife. Therefore, we cannot guarantee specific results or eliminate all risks related to gardening activities. Customers are encouraged to follow additional advice from local experts if needed. We disclaim liability for any loss, damage, or adverse effects resulting from the use or application of our services or the information presented on this website. The content herein is for general informational purposes and should not replace professional consultation where appropriate.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact-info" aria-label="Contact Information">
+      <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 3.45 2.2 6.3 5.3 7.37L12 22l1.7-5.63C16.8 15.3 19 12.45 19 9c0-3.87-3.13-7-7-7zm0 10.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 7.5 12 7.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> 110 W 3rd St, New York, NY 10012, USA</div>
+      <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.55 1.28 1 1 0 01.89 1v3.31a1 1 0 01-1 1A17.92 17.92 0 013 6a1 1 0 011-1h3.31a1 1 0 011 .89 11.36 11.36 0 001.28 3.55 1 1 0 01-.21 1.11z"/></svg> (855) 242-9998</div>
+      <div><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> support@Glorious.com</div>
+    </div>
+    &copy; 2024 Glorious Gardening Services. All rights reserved.
+  </footer>
+</body>
+</html>
